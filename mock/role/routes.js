@@ -46,14 +46,14 @@ const constantRoutes = [
     ]
   },
   {
-    path: '/documentation',
+    path: '/training',
     component: 'layout/Layout',
     children: [
       {
         path: 'index',
-        component: 'views/documentation/index',
-        name: 'Documentation',
-        meta: { title: 'Documentation', icon: 'documentation', affix: true }
+        component: 'views/training/index',
+        name: 'Training',
+        meta: { title: 'Training', icon: 'documentation', affix: true }
       }
     ]
   },

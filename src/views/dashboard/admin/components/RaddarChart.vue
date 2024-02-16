@@ -55,7 +55,7 @@ export default {
         },
         radar: {
           radius: '66%',
-          center: ['50%', '42%'],
+          center: ['40%', '50%'],
           splitNumber: 8,
           splitArea: {
             areaStyle: {
@@ -68,22 +68,24 @@ export default {
             }
           },
           indicator: [
-            { name: 'Sales', max: 10000 },
-            { name: 'Administration', max: 20000 },
-            { name: 'Information Technology', max: 20000 },
-            { name: 'Customer Support', max: 20000 },
-            { name: 'Development', max: 20000 },
-            { name: 'Marketing', max: 20000 }
+            { name: this.$t('dashboard.supportregression'), max: 10 },
+            { name: this.$t('dashboard.supportclassification'), max: 10 },
+            { name: this.$t('dashboard.gridsearch'), max: 10 },
+            { name: this.$t('dashboard.explainai'), max: 10 },
+            { name: this.$t('dashboard.featureanalysis'), max: 10 },
+            { name: this.$t('dashboard.advsampleanalysis'), max: 10 }
           ]
         },
         legend: {
-          left: 'center',
-          bottom: '10',
-          data: ['Allocated Budget', 'Expected Spending', 'Actual Spending']
+          top: 'center',
+          right: '10',
+          orient: 'vertical',
+          data: ['A','B','Silas']
         },
         series: [{
           type: 'radar',
           symbolSize: 0,
+       
           areaStyle: {
             normal: {
               shadowBlur: 13,
@@ -94,18 +96,27 @@ export default {
             }
           },
           data: [
+            // {
+            //   value: [5000, 7000, 12000, 11000, 15000, 14000],
+            //   name: 'Allocated Budget'
+            // },
+            // {
+            //   value: [4000, 9000, 15000, 15000, 13000, 11000],
+            //   name: 'Expected Spending'
+            // },
             {
-              value: [5000, 7000, 12000, 11000, 15000, 14000],
-              name: 'Allocated Budget'
+              value: [10, 10, 10, 9, 10, 10],
+              name: 'Silas'
             },
             {
-              value: [4000, 9000, 15000, 15000, 13000, 11000],
-              name: 'Expected Spending'
+              value: [4, 7, 7, 3, 4, 9],
+              name: 'B'
             },
             {
-              value: [5500, 11000, 12000, 15000, 12000, 12000],
-              name: 'Actual Spending'
+              value: [1, 1, 2, 3, 4, 5],
+              name: 'A'
             }
+     
           ],
           animationDuration: animationDuration
         }]
